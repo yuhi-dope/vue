@@ -22,8 +22,7 @@ export default {
   },
   async created() {
     let item = await axios.get(
-      `https://apis.postcode-jp.com/api/v3/postcodes?postcode=${this.address}
-`
+      `https://apis.postcode-jp.com/api/v4/postcodes/${this.address}?apiKey=o61CLgzK0EIKezwVfGMnkzh1h8TtSxx9UULEs0q`
     );
     this.data = item.data;
     this.address = this.data.address;
